@@ -30,14 +30,15 @@ const createDropDownMenu = () => {
 
     body.appendChild(container);
 
+    const dropDownContainer = document.querySelector(".drop-down-container");
     const hoverBar = document.querySelector(".hover-bar");
 
-    hoverBar.addEventListener('mouseover', (e)=>{
+    dropDownContainer.addEventListener('mouseover', (e)=>{
         const dropItems = (e.target.closest(".drop-down-container")).querySelectorAll(".drop-item");
         dropItems.forEach((item) =>showElement(item));
     })
 
-    hoverBar.addEventListener('mouseout', (e)=>{
+    dropDownContainer.addEventListener('mouseout', (e)=>{
         const dropItems = (e.target.closest("#drop-down-container")).querySelectorAll(".drop-item");
         dropItems.forEach((item) =>hideElement(item));
     })
