@@ -3,8 +3,13 @@ console.log('o');
 console.log('p');
 
 const dropDownContainer = document.querySelector("#drop-down-container");
+
+
 dropDownContainer.addEventListener('mouseover', (e)=>{
-    console.log(e.target);
+    const dropItems = (e.target.closest("#drop-down-container")).querySelectorAll(".drop-item");
+    console.log(dropItems);
+    // console.log(e.target.querySelectorAll(".drop-item"));
+
     toggleDisplay(e.target);
 
 })
