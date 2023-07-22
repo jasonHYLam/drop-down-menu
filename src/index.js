@@ -7,14 +7,20 @@ const dropDownContainer = document.querySelector("#drop-down-container");
 
 dropDownContainer.addEventListener('mouseover', (e)=>{
     const dropItems = (e.target.closest("#drop-down-container")).querySelectorAll(".drop-item");
-    console.log(dropItems);
+    dropItems.forEach((item) =>showElement(item));
     // console.log(e.target.querySelectorAll(".drop-item"));
-
-    toggleDisplay(e.target);
-
 })
 
-function toggleDisplay(element) {
-    (element.classList.contains("hidden"))? element.classList.remove("hidden") : element.classList.add("hidden");
+dropDownContainer.addEventListener('mouseout', (e)=>{
+    const dropItems = (e.target.closest("#drop-down-container")).querySelectorAll(".drop-item");
+    dropItems.forEach((item) =>hideElement(item));
+    // console.log(e.target.querySelectorAll(".drop-item"));
+})
 
+function hideElement(element) {
+    element.classList.add('hidden');
+}
+
+function showElement(element) {
+    element.classList.remove('hidden');
 }
