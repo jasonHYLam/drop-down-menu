@@ -2,16 +2,16 @@ import "./style.css";
 console.log('o');
 console.log('p');
 
-const dropDownContainer = document.querySelector("#drop-down-container");
+const hoverBar = document.querySelector("#hover-bar");
 
 
-dropDownContainer.addEventListener('mouseover', (e)=>{
+hoverBar.addEventListener('mouseover', (e)=>{
     const dropItems = (e.target.closest("#drop-down-container")).querySelectorAll(".drop-item");
     dropItems.forEach((item) =>showElement(item));
     // console.log(e.target.querySelectorAll(".drop-item"));
 })
 
-dropDownContainer.addEventListener('mouseout', (e)=>{
+hoverBar.addEventListener('mouseout', (e)=>{
     const dropItems = (e.target.closest("#drop-down-container")).querySelectorAll(".drop-item");
     dropItems.forEach((item) =>hideElement(item));
     // console.log(e.target.querySelectorAll(".drop-item"));
