@@ -1,14 +1,11 @@
 import "./style.css";
-console.log('o');
-console.log('p');
-
 
 const createDropDownMenu = () => {
     const body = document.querySelector('body');
+
     const createElement = (elementType, textContent, ...classes) => {
         const newElement = document.createElement(elementType);
         newElement.textContent = textContent;
-        console.log(classes);
 
         classes.map(className => newElement.classList.add(className));
         return newElement;
@@ -34,12 +31,13 @@ const createDropDownMenu = () => {
     const hoverBar = document.querySelector(".hover-bar");
 
     dropDownContainer.addEventListener('mouseover', (e)=>{
-        const dropItems = (e.target.closest(".drop-down-container")).querySelectorAll(".drop-item");
+        console.log(e.target.closest(".drop-down-container"));
+        const dropItems = (e.target.closest(".drop-down-container")).querySelectorAll(".drop-down-item");
         dropItems.forEach((item) =>showElement(item));
     })
 
     dropDownContainer.addEventListener('mouseout', (e)=>{
-        const dropItems = (e.target.closest("#drop-down-container")).querySelectorAll(".drop-item");
+        const dropItems = (e.target.closest(".drop-down-container")).querySelectorAll(".drop-down-item");
         dropItems.forEach((item) =>hideElement(item));
     })
 
@@ -55,4 +53,6 @@ const createDropDownMenu = () => {
 }
 
 
+createDropDownMenu();
+createDropDownMenu();
 createDropDownMenu();
