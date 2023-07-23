@@ -1,6 +1,6 @@
 import "./style.css";
 
-const createDropDownMenu = () => {
+export const createDropDownMenu = () => {
     const body = document.querySelector('body');
 
     const createElement = (elementType, textContent, ...classes) => {
@@ -48,8 +48,6 @@ const createDropDownMenu = () => {
     function showElement(element) {
         element.classList.remove('hidden');
     }
-
-
 }
 
 
