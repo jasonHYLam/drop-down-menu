@@ -47,14 +47,6 @@ export const createDropDownMenu = () => {
             } 
         })
     })
-    // hoverBar.addEventListener('mouseout', (e) => {
-    //     if (e.target.classList.contains("hover-bar")) {
-    //         console.log('h')
-    //         const hoverBar = e.target;
-    //         const dropItems = (hoverBar.closest(".hover-bar")).querySelectorAll(".drop-down-item");
-    //         dropItems.forEach((item) => hideElement(item));
-    //     }
-    // })
 
     function hideElement(element) {
         element.classList.add('hidden');

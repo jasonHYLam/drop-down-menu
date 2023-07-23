@@ -1,8 +1,8 @@
 {
-  "name": "drop-down-menu",
+  "name": "@prodijay/drop-down-menu",
   "version": "1.0.0",
   "description": "",
-  "private": true,
+  "private":false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
